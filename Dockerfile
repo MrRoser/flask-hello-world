@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM ubuntu:22.04
 
 # Create app directory
 WORKDIR /flask-hello-world
