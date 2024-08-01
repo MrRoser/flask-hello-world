@@ -5,8 +5,9 @@ WORKDIR /flask-hello-world
 
 # Install app dependencies
 COPY src/requirements.txt ./
+COPY src/app.py ./
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8080
-CMD [ "python", "app.py" ]
+EXPOSE 5000
+CMD [ "python","-m","flask","run","--host=0.0.0.0" ]
